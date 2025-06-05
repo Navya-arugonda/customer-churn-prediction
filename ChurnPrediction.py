@@ -232,7 +232,7 @@ with open("encoders.pkl", "rb") as f:
   encoders = pickle.load(f)
 
 
-# encode categorical featires using teh saved encoders
+# encode categorical features using the saved encoders
 for column, encoder in encoders.items():
   input_data_df[column] = encoder.transform(input_data_df[column])
 
